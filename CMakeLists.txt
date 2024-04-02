@@ -61,7 +61,7 @@ list(APPEND MODULES_USED
 set(MCU STM32F411xe)
 set(MCU_DIR include/STM32F4xx/)
 set(MCU_SPEC  cortex-m4)
-set(FLOAT_SPEC "-mfloat-abi=none -mfpu=fpv4-sp-d16")
+set(FLOAT_SPEC "-mfloat-abi=hard -mfpu=fpv4-sp-d16")
 
 # Dont need to change this if MCU is defined correctly
 # then directly set the STARTUP_FILE and SYSTEM_FILE to the required files
