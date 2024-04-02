@@ -78,7 +78,7 @@ int main ( void ) {
 #endif
     HAL_Init();
     SystemClock_Config();
-    __HAL_RCC_GPIOG_CLK_ENABLE();
+    __HAL_RCC_GPIOA_CLK_ENABLE();
     GPIO_InitStruct.Pin   = LED1_PIN;
     GPIO_InitStruct.Mode  = GPIO_MODE_OUTPUT_PP;
     GPIO_InitStruct.Pull  = GPIO_PULLUP;
