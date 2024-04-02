@@ -58,7 +58,7 @@ list(APPEND MODULES_USED
 #-------------------
 # MCU Setup
 #-------------------
-set(MCU STM32F411xx)
+set(MCU STM32F411xe)
 set(MCU_DIR include/STM32F4xx/)
 set(MCU_SPEC  cortex-m4)
 set(FLOAT_SPEC "-mfloat-abi=none -mfpu=fpv4-sp-d16")
