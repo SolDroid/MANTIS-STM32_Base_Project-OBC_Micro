@@ -51,9 +51,9 @@ void SystemClock_Config(void);
 static GPIO_InitTypeDef  GPIO_InitStruct;
 
 /** @brief   LED pin */
-#define LED1_PIN GPIO_PIN_13
+#define LED1_PIN GPIO_PIN_5
 /** @brief   LED port */
-#define LED1_PORT GPIOG
+#define LED1_PORT GPIOA
 
 /**
 * @brief    Task for blinking an LED every second
