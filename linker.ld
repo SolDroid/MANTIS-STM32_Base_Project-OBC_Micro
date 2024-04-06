@@ -34,7 +34,7 @@ _estack = 0x20030000;    /* end of RAM */
  *  but as the complexity grow, you will have to
  *  increase this */
 
-_Min_Heap_Size = 0x4B00;      /* required amount of heap  */
+_Min_Heap_Size = 0x8B00;      /* required amount of heap  */
 _Min_Stack_Size = 0x400;    /* required amount of stack */
 
 /* Specify the memory areas */
