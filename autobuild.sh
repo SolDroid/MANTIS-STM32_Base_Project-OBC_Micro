@@ -18,7 +18,7 @@ BUILD_RELEASE() {
         mkdir -p ${BUILD_DIR_RELEASE}
 
         # Setup CMake
-        cmake . -B ${BUILD_DIR_RELEASE} -DCMAKE_BUILD_TYPE=Debug -DCMAKE_TOOLCHAIN_FILE=../../cross.cmake -DTARGET_GROUP=production -DSEMIHOSTING=0
+        cmake . -B ${BUILD_DIR_RELEASE} -DCMAKE_BUILD_TYPE=Debug -DCMAKE_TOOLCHAIN_FILE=cross.cmake -DTARGET_GROUP=production -DSEMIHOSTING=0
 
         # Build main.elf
         make -C ${BUILD_DIR_RELEASE} main.elf
