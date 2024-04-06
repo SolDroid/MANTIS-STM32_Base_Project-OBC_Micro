@@ -25,7 +25,7 @@ SOFTWARE.
 */
 
 /* Highest address of the user mode stack */
-_estack = 0x20030000;    /* end of RAM */
+_estack = 0x20020000;    /* end of RAM */
 
 /* Set minimum size for stack and dynamic memory. */
 /* (The linker will generate an error if there is
