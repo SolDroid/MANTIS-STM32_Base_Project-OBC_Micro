@@ -345,7 +345,7 @@ if(TARGET_GROUP STREQUAL production)
         -ex "target extended :3333"
         -ex "dashboard -output $(GDB_TTY)"
         -ex "load ${PROJECT_NAME}.elf"
-        -ex "monitor arm semihosting enable"
+        -ex "monitor arm semihosting disable"
         )
 
     ######################################################################
