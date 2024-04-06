@@ -349,6 +349,18 @@ if(TARGET_GROUP STREQUAL production)
         )
 
     ######################################################################
+    # @Target: flash_st
+    # @Brief: flash the release/debug bin using st-flash
+    ######################################################################
+    add_custom_target(flash DEPENDS ${PROJECT_NAME}.elf)
+    add_custom_command(TARGET flash_st
+        #COMMAND bash "-c" "pgrep -x \"openocd\" || (echo \"Please start openocd\" && exit -1)"
+        COMMAND echo "Converting ${PROJECT_NAME}.elf to ${PROJECT_NAME}.bin and flashing using st-flash"
+        COMMAND ${CMAKE_OBJCOPY} -O binary ${PROJECT_NAME}.elf ${PROJECT_NAME}.bin
+        COMMAND ${ST_LINK_FLASH} --reset write ${PROJECT_NAME}.bin 0x8000000
+        )
+
+    ######################################################################
     # @Target: doc
     # @Brief: Generate doxygen documentation
     ######################################################################
