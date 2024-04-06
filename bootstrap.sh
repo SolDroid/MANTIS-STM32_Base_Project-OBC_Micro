@@ -32,7 +32,7 @@ INSTALL_NIX() {
                         curl -L https://nixos.org/nix/install | sh
                         ;;
                 [Ll]* ) echo "Installing Nix for Linux...";
-                        curl -L https://nixos.org/nix/install | sh -s -- --daemon
+                        curl -L https://nixos.org/nix/install | sh -s -- --no-daemon
                         ;;
                 * ) echo "Fatal error. Did not recognize \$wml ($wml).";
                         echo "ABORTING.";
