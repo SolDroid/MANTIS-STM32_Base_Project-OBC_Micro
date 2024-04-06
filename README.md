@@ -28,6 +28,8 @@ Once Nix is installed, the MANTIS DevEnv must be entered by running `nix-shell -
 _This step is mandatory to ensure all required build dependencies and tooling are available_.
 
 ## Building, Flashing and Debugging
+[![asciicast](https://asciinema.org/a/YH4V1O19sdZQZ0O16xgigFbwG.svg)](https://asciinema.org/a/YH4V1O19sdZQZ0O16xgigFbwG)
+
 Once entered the DevEnv, you'll be in an ad-hoc shell environment with all of the build dependencies needed for the project to build.
 
 ```
