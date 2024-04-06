@@ -38,6 +38,7 @@ set(CMAKE_SIZE_UTIL ${CROSS_TOOLCHAIN}size CACHE INTERNAL "Size tool")
 set(CMAKE_C_GDB /Users/alex/Programming/MANTIS-STM32_Base_Project/xpacks/.bin/arm-none-eabi-gdb-py3 CACHE INTERNAL "Debugger")
 SET(CMAKE_AR ${CROSS_TOOLCHAIN}gcc-ar CACHE INTERNAL "Assembler")
 SET(CMAKE_RANLIB ${CROSS_TOOLCHAIN}gcc-ranlib CACHE INTERNAL "Ranlib")
+SET(ST_LINK_FLASH st-flash)
 
 
 #set(CMAKE_FIND_ROOT_PATH_MODE_PROGRAM NEVER)
