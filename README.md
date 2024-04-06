@@ -5,6 +5,8 @@ Base FreeRTOS Project Repo for the MANTIS CubeSat Core Software.
 See [STM32_BASE_PROJECT.md](/STM32_BASE_PROJECT.md) for the original README of the parent repo.
 
 ## Getting Started
+![bootstrap gif](/img/bootstrap.gif)
+
 To get started, clone the repo on a Windows (WSL), MacOS or Linux system:
 
 ```
