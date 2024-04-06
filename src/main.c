@@ -70,12 +70,12 @@ void LedBlinky_Task(void *pvParameters) {
 }
 
 int main ( void ) {
-#if SEMIHOSTING
-    initialise_monitor_handles();
-    setbuf(stdout, NULL);
-    //~ setvbuf(stdout, NULL, _IONBF, 0);
-    INFO("Main program start");
-#endif
+// #if SEMIHOSTING
+//     initialise_monitor_handles();
+//     setbuf(stdout, NULL);
+//     //~ setvbuf(stdout, NULL, _IONBF, 0);
+//     INFO("Main program start");
+// #endif
     HAL_Init();
     SystemClock_Config();
     __HAL_RCC_GPIOA_CLK_ENABLE();
