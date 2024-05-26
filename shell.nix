@@ -4,11 +4,15 @@ let
 in
         pkgs.mkShellNoCC {
                 packages = with pkgs; [
+				# Basic Requirements for CMake / STM32
                         gcc-arm-embedded
                         stlink
                         cmake
                         openocd
                         vim
+				# Requirements for Protobuf
+						protobuf
+						abseil-cpp
                 ];
 
                 GREETING = ''
