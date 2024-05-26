@@ -6,3 +6,7 @@
 	path = components/CMSIS
 	url = https://github.com/ARM-software/CMSIS_5.git
 	branch = master
+[submodule "devenv"]
+	path = devenv
+	url = https://github.com/DalhousieSpaceSystemsLab/MANTIS-DevEnv.git
+	branch = master
