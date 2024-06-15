@@ -69,6 +69,27 @@ void LedBlinky_Task(void *pvParameters) {
     }
 }
 
+/**
+ * Components
+ * 1. LORIS cFS Refurbishing      					(Sam)
+ * 2. Setting up the STM32 physically in the DSS room for FlatSat	(Alex)
+ * 3. Compiling LORIS cFS and MANTIS cFS on PC for sims			(Logan)
+ * 4. Determining / experimenting with where Subsystem Processes 	(Alex)
+ * 	will 'live' in the MANTIS cFS / OS.
+ * 5. What are the FreeRTOS-specific adaptions and configurations	(Pat)
+ * 	needed for our POSIX assumptions to work / be valid?
+ */
+
+void Payload_Task(void *pvParameters) {
+	if(ipc_connect("pay") != 0) {
+		printf("Failed to connecto to the IPC\n");
+	}
+
+	while(1) {
+		ipc_send
+	}
+}
+
 int main ( void ) {
 #if SEMIHOSTING
     initialise_monitor_handles();
@@ -92,8 +113,29 @@ int main ( void ) {
                  NULL, 									/* The parameter passed to the task - just to check the functionality. */
                  3, 										/* The priority assigned to the task. */
                  NULL );									/* The task handle is not required, so NULL is passed. */
+
+	/** ALL CORE SOFTWARE INIT HERE */
+	/** 1. Check system integrity (checksum)
+	 * 		a. If no match, fix with 'gold copies'
+	 * 	2. Start the IPC server
+	 * 	etc.
+	 */
+
+/**
+ * FOR EACH SUBSYSTEM TASK AVAILABLE,
+ * 		xTaskCreate( THAT SUBSYSTEM TASK );
+ * 	END FOR
+ *
+ * 	xTaskCreate( MISSION MODULE );
+ *
+ * 	START SCHEDULER
+ */
+
+
     vTaskStartScheduler();
+
     while (1) {
+		/** ALL SYSTEM MONITORING DOWN HERE */
     }
     return 0;
 }
