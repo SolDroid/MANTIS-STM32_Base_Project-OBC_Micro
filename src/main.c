@@ -70,6 +70,76 @@ void LedBlinky_Task(void *pvParameters) {
 }
 
 /**
+* @brief    Template function for OBC_AI
+* 
+* @param    void
+* 
+* @retval   int
+*/
+int Template_OBC_AI(void) {
+    HAL_GPIO_TogglePin(LED1_PORT, LED1_PIN);
+    vTaskDelay(100/portTICK_PERIOD_MS);
+    HAL_GPIO_TogglePin(LED1_PORT, LED1_PIN);
+    return 0;
+}
+
+/**
+* @brief    Template function for COMMS
+* 
+* @param    void
+* 
+* @retval   int
+*/
+int Template_COMMS(void) {
+    HAL_GPIO_TogglePin(LED1_PORT, LED1_PIN);
+    vTaskDelay(100/portTICK_PERIOD_MS);
+    HAL_GPIO_TogglePin(LED1_PORT, LED1_PIN);
+    return 0;
+}
+
+/**
+* @brief    Template function for ADCS
+* 
+* @param    void
+* 
+* @retval   int
+*/
+int Template_ADCS(void) {
+    HAL_GPIO_TogglePin(LED1_PORT, LED1_PIN);
+    vTaskDelay(100/portTICK_PERIOD_MS);
+    HAL_GPIO_TogglePin(LED1_PORT, LED1_PIN);
+    return 0;
+}
+
+/**
+* @brief    Template function for Thermal
+* 
+* @param    void
+* 
+* @retval   int
+*/
+int Template_Thermal(void) {
+    HAL_GPIO_TogglePin(LED1_PORT, LED1_PIN);
+    vTaskDelay(100/portTICK_PERIOD_MS);
+    HAL_GPIO_TogglePin(LED1_PORT, LED1_PIN);
+    return 0;
+}
+
+/**
+* @brief    Template function for EPS
+* 
+* @param    void
+* 
+* @retval   int
+*/
+int Template_EPS(void) {
+    HAL_GPIO_TogglePin(LED1_PORT, LED1_PIN);
+    vTaskDelay(100/portTICK_PERIOD_MS);
+    HAL_GPIO_TogglePin(LED1_PORT, LED1_PIN);
+    return 0;
+}
+
+/**
  * Components
  * 1. LORIS cFS Refurbishing      					(Sam)
  * 2. Setting up the STM32 physically in the DSS room for FlatSat	(Alex)
